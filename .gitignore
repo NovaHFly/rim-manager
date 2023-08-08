@@ -1,0 +1,29 @@
+.*
+_*
+
+*.py[co]
+
+!.gitignore
+
+# Python package init files
+!__init__.py
+
+# Venv activate shortcut scripts
+/activate*
+
+# Log files
+*.log
+
+# Packager files
+poetry.lock
+*.egg
+*.egg-info
+eggs
+dist
+build
+
+# Unit test / coverage reports
+.coverage
+
+# Project planning files
+/_PLAN

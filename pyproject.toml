@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "rim-manager"
+version = "0.1.0"
+description = "Rimworld mod manager"
+authors = ["NovaHFly <mugiviska@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "rim_manager"}]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment",
+]
+
+# [tool.poetry.scripts]
+# image_scrapper = "image_scrapper:main_cli"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+httpx = "^0.24.1"
+beautifulsoup4 = "^4.12.2"
+lxml = "^4.9.3"
+pysimplegui = "^4.60.5" # For gui
+docopt-ng = "^0.9.0" # For cli
+
+
+[tool.poetry.group.dev.dependencies]
+icecream = "^2.1.3"
+
+
+[tool.poetry.group.testing.dependencies]
+pytest = "^7.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "--cov=image_scrapper"
+testpaths = [
+    "tests"
+]
+
